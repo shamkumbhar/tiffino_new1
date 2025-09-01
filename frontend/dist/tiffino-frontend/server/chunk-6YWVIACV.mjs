@@ -1,0 +1,2 @@
+import './polyfills.server.mjs';
+var t={production:!0,adminLogin:"http://localhost:8890/users/admin/login",userlogin:"http://localhost:8890/users/",cuisines:"http://localhost:8920",order:"http://localhost:8910/orders",usersubcriptionapi:"http://localhost:8960/subscriptions",subscriptionplans:"http://localhost:8960/subscription-plans",deliveryapi:"http://localhost:8970",reviews:"http://localhost:8950/api/reviews",payment:"http://localhost:8930",Reward:"http://localhost:8940"};export{t as a};

@@ -1,0 +1,31 @@
+{
+  "routes": [
+    "/",
+    "/Account-Registration",
+    "/addtocart",
+    "/admin-login",
+    "/changepassword",
+    "/checkpayment",
+    "/contact",
+    "/cookies",
+    "/cookiesprivacy",
+    "/cusinefilter",
+    "/delivery",
+    "/foodcart",
+    "/login",
+    "/MembershipPlan",
+    "/menuadd",
+    "/oauth2/success",
+    "/offers",
+    "/payment",
+    "/paymentretry",
+    "/profile",
+    "/register",
+    "/review",
+    "/settings",
+    "/subplan",
+    "/subscriptions",
+    "/terms",
+    "/wishlist"
+  ]
+}
