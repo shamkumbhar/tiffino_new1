@@ -91,23 +91,6 @@ services:
     networks:
       - app-network
 
-  loyalty-service:
-    build:
-      context: ./backend/loyalty-service
-      dockerfile: Dockerfile
-    container_name: loyaltyservice
-    ports:
-      - "8940:8940"
-    environment:
-      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-db:3306/loyaltydb?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
-      - SPRING_DATASOURCE_USERNAME=root
-      - SPRING_DATASOURCE_PASSWORD=root
-      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8990/eureka
-    depends_on:
-      - mysql-db
-      - eureka-server
-    networks:
-      - app-network
 
   payment-service:
     build:
@@ -144,24 +127,7 @@ services:
       - eureka-server
     networks:
       - app-network
-
-  order-service:
-    build:
-      context: ./backend/order-service
-      dockerfile: Dockerfile
-    container_name: orderservice
-    ports:
-      - "8910:8910"
-    environment:
-      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-db:3306/orderdb?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
-      - SPRING_DATASOURCE_USERNAME=root
-      - SPRING_DATASOURCE_PASSWORD=root
-      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8990/eureka
-    depends_on:
-      - mysql-db
-      - eureka-server
-    networks:
-      - app-network
+      
 
   frontend:
     build:
